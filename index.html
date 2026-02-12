@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Someone Special ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="canvas-container"></div>
+
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div id="content">
+        <div class="step active" id="step1">
+          <div class="emoji heart-beat">❤️</div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            Сайн уу, Хөөрхнөө
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            Би чамд зориулж онцгой зүйл бэлдсэн..
+          </p>
+          <button class="btn" id="start-btn">Эхлэцгээе</button>
+        </div>
+
+        <div class="step" id="step2">
+          <div class="emoji">🎉</div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+            Чамтай танилцсандаа би маш их аз жаргалтай байдаг
+          </h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Тэр өдөр яг л тод гэрэл цацруулсан өдөр шиг санагдаж, чиний
+            инээмсэглэл миний сэтгэлийг дулаацуулсан. Бидний хамт өнгөрүүлсэн
+            мөч бүр миний дурсамжинд гүн сийлэгдэж, энгийн зүйлс ч гэсэн онцгой,
+            жаргалтай мэдрэмж төрүүлдэг. Чиний үг, инээмсэглэл, энгийн харц бүгд
+            миний өдөр бүрийг гэрэлтүүлдэг бөгөөд би энэ дурсамжийг дахин дахин
+            эргэн дурсахыг хүсдэг.
+          </p>
+          <button class="btn" id="next-btn-2">
+            Таныг онцгой болгодог зүйл юу вэ?
+          </button>
+        </div>
+
+        <div class="step" id="step3">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gradient">
+            Чи яагаад онцгой вэ? Энд 3 шалтгаан байна
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="reason-card">
+              <div class="emoji text-3xl">✨</div>
+              <h3 class="text-xl font-bold mb-2 text-pink-600">
+                Сайхан сэтгэл
+              </h3>
+              <p class="text-gray-700">
+                Бусдыг халамжлах чин хүсэл чинь үнэхээр урам зориг өгдөг. Чиний
+                энэрэнгүй сэтгэл, анхаарал халамж нь бусдын амьдралыг
+                гэрэлтүүлдэг.
+              </p>
+            </div>
+            <div class="reason-card">
+              <div class="emoji text-3xl">😊</div>
+              <h3 class="text-xl font-bold mb-2 text-pink-600">Инээмсэглэл</h3>
+              <p class="text-gray-700">
+                Чи ороод ирсэн л бол өрөө бүрийг гэрэлтүүлдэг, чиний сэтгэл
+                татам энерги миний бодолд өдөржин үлддэг. Чиний оршихуй бүрийг
+                би мартдаггүй.
+              </p>
+            </div>
+            <div class="reason-card">
+              <div class="emoji text-3xl">🌟</div>
+              <h3 class="text-xl font-bold mb-2 text-pink-600">Чиний сэтгэл</h3>
+              <p class="text-gray-700">
+                Чиний чин хүсэл, эрч хүч чинь бусдад халдварладаг. Чи амьдралыг
+                сонирхолтой, хөгжилтэй болгож өгдөг.
+              </p>
+            </div>
+          </div>
+          <button class="btn" id="next-btn-3">Гэнэтийн бэлэг</button>
+        </div>
+
+        <div class="step" id="step4">
+          <div class="emoji">📸</div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+            Хэзээ гэдгийг санаарай...
+          </h2>
+          <div
+            class="bg-gradient-to-r from-pink-200 to-rose-200 rounded-xl p-8 mb-8 flex flex-col justify-center items-center"
+          >
+            <img src="couple.jpg" height="350" width="350" alt="" srcset="" />
+            <p class="text-lg text-gray-700 italic mt-2">
+              (Бидний хамтдаа өнгөрүүлсэн хамгийн дуртай дурсамжийг энд
+              төсөөлөөд үз дээ)
+            </p>
+          </div>
+          <p class="text-lg text-gray-700 mb-6">
+            Чамтай өнгөрүүлсэн мөч бүр миний зүрхэнд үнэт дурсамж болж үлддэг.
+            Бид хамтдаа инээлдэж байгаа эсвэл зүгээр л нам гүм, амар тайван
+            байдлыг эдэлж байгаа эсэхээс үл хамааран, чамтай өнгөрүүлсэн цаг мөч
+            бүр онцгой, мартагдашгүй байдаг. Тэр агшин бүр миний сэтгэлийг
+            дулаацуулж, өдөр бүрийн амьдралд гэрэл гэгээ нэмдэг.
+          </p>
+          <button class="btn" id="next-btn-4">Сүүлийн нэг зүйл</button>
+        </div>
+
+        <div class="step" id="step5">
+          <div class="emoji">🎵</div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+            Бидний дуртай дуу
+          </h2>
+          <a>Mehlun - Suulchiin bujig</a>
+          <audio controls autoplay muted loop class="music">
+            <source src="Mehlun - Suulchiin bujig (MV).mp3" type="audio/mpeg" />
+          </audio>
+          <p class="text-xl font-semibold text-pink-600 mb-8">Хайртай шүү❤️</p>
+          <button class="btn" id="confetti-btn">Тэмдгэлье!</button>
+          <p class="mt-8 text-gray-500">Зөвхөн танд зориулсан ❤️</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
