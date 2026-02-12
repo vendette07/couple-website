@@ -3,7 +3,11 @@ body {
   overflow: hidden;
   font-family: "Inter", sans-serif;
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   touch-action: manipulation;
+  touch-action: manipulation;
+  min-height: 100vh;
   background: linear-gradient(135deg, #f9a8d4, #f3e8ff);
 }
 
@@ -11,7 +15,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #content {
